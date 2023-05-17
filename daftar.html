@@ -10,22 +10,23 @@
 <body>
     <div class="signup-box">
       <h1>Sign Up</h1>
-      <form>
+      <form name="myForm">
         <label>New username</label>
-        <input type="username" placeholder="New username" />
+        <input type="username" placeholder="New username" id="userName" name="userName" required/>
         <label for="email">Email</label><br />
-        <input type="email" name="email" id="email" placeholder="Email" /><br />
+        <input type="email" name="email_1" id="email_1" placeholder="Email" /><br required/>
         <label>Confirm Email</label>
-        <input type="email" name="email" id="email" placeholder="Confirm Email" />
+        <input type="email" name="email_2" id="email_2" placeholder="Confirm Email" required/>
         <label for="ttl">Tanggal lahir</label><br />
-        <input type="date" name="date" id="date" /><br />
+        <input type="date" name="date" id="date" required/><br />
         <label>Password</label>
-        <input type="Password" placeholder="Password" />
+        <input type="Password" placeholder="Password" name="pw1" id="pw1" required/>
         <label>Confirm Password</label>
-        <input type="Password" placeholder="Confirm Password" />
-        <input type="button" value="Join to Us!" />
+        <input type="Password" placeholder="Confirm Password" name="pw2" id="pw2" required/>
+        <input type="submit" value="Join to Us!" onClick="requireUsername(),matchingMail(),matchingPass(),lastCheckAll(); return false" id="button"/>
       </form>
     </div>
-    <p class="para-2">Sudah Punya Akun? <a href="login.html">Login Disini</a></p>
+    <p class="para-2">Sudah Punya Akun? <a href="login.html" id="login">Login Disini</a></p>
+    <script src="script.js"></script>
   </body>
 </html>
